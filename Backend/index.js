@@ -11,10 +11,10 @@ mongoose.connect(mongoDb.db, {
 //   useFindAndModify: false,
   useUnifiedTopology: true
 }).then(() => {
-    console.log('Database sucessfully connected ')
+    console.log('Database sucessfully connected ');
   },
   error => {
-    console.log('Database error: ' + error)
+    console.log('Database error: ' + error);
   }
 )
  
@@ -32,14 +32,14 @@ app.use(express.static(path.join(__dirname, 'dist/angular-mean-crud-tutorial')))
  
  
 // API root
-app.use('/api', bookRoute)
+app.use('/api', bookRoute);
  
 // PORT
 const port = process.env.PORT || 8000;
 
 app.listen(port, () => {
     console.log('Listening on port ' + port)
-  })
+  });
    
   // 404 Handler
   app.use((req, res, next) => {
